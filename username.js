@@ -1,0 +1,20 @@
+//
+function validateUsername(username) {
+  if (username.length < 4) {
+    return "Too Short";
+  }
+  if (username.includes(" ")) {
+    return "No Space Allowed";
+  }
+  if (username.toLowerCase().includes("admin")) {
+    return "Reserved Word";
+  }
+  return "Available";
+}
+console.log(validateUsername("anika123"));
+console.log(validateUsername("ab"));
+console.log(validateUsername("a b"));
+console.log(validateUsername("abcd"));
+console.log(validateUsername("anika kabir"));
+console.log(validateUsername("superadmin99"));
+console.log(validateUsername("Admin_Anika"));
